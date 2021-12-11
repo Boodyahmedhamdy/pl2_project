@@ -34,7 +34,7 @@ public class Event {
     Event() {
         // in case of empty fields .. the default values
 
-        this.id = -1;
+        this.id = idOFCurrentEvent;
 
         this.name = "eventName";
         this.description = "eventDescription";
@@ -48,6 +48,7 @@ public class Event {
     }
 
     Event(String name) {
+        this.id = idOFCurrentEvent;
         this.name = name;
         idOFCurrentEvent++;
     }
@@ -62,8 +63,8 @@ public class Event {
         this.description = description;
     }
 
-    Event(String name,String subject, String descriptionint, int numberOfTickets) {
-        this(name, subject, descriptionint);
+    Event(String name,String subject, String description, int numberOfTickets) {
+        this(name, subject, description);
         this.numberOfTickets = numberOfTickets;
     }
 
@@ -154,7 +155,7 @@ public class Event {
 
     // end of getters and setters
     // ------------------------------------------
-    // the functionality of the class .. working with data memebers
+    // the functionality of the class .. working with data members
 
 
 
